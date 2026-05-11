@@ -1,0 +1,13 @@
+{
+  "name": "biadacandys",
+  "version": "1.0.0",
+  "description": "Landing page for Bia da Candy's",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "build": "echo 'Static site, no build needed'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

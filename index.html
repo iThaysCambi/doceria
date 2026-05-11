@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bia da Candy's | Doceria Gourmet</title>
+    <meta name="description" content="Bia da Candy's - Doceria Gourmet em Sorocaba. Cookies, bolos e doces artesanais feitos com amor.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <img src="public/logo.png" alt="Bia da Candy's Logo" class="logo" id="main-logo">
+                <div class="header-contact">
+                    <a href="https://wa.me/5513999999999" target="_blank" class="btn-whatsapp-small">
+                        <i class="fab fa-whatsapp"></i> 13 99999-9999
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="badge">Feito com amor em Sorocaba</span>
+                    <h1>Doces Gourmet que encantam seu dia</h1>
+                    <p>O sabor artesanal dos melhores cookies e bolos da região, agora a um clique de distância.</p>
+                    <div class="hero-btns">
+                        <a href="#encomenda" class="btn-primary">Fazer Encomenda</a>
+                        <a href="https://www.instagram.com/biadacandys/" target="_blank" class="btn-secondary">Ver Instagram</a>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <img src="public/hero.png" alt="Doces Gourmet" class="hero-img">
+                    <div class="sunflower-decoration">🌻</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Nossas Delícias</h2>
+                    <p>Conheça nossos produtos mais pedidos</p>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card" data-product="Bolo de festa">
+                        <img src="public/bolo_festa.png" alt="Bolo de Festa">
+                        <h3>Bolo de Festa</h3>
+                        <p>Personalizado para seu evento especial.</p>
+                        <button class="btn-order-select" onclick="selectProduct('Bolo de festa')">Selecionar</button>
+                    </div>
+                    <div class="product-card" data-product="Bolo caseiro">
+                        <img src="public/bolo_caseiro.png" alt="Bolo Caseiro">
+                        <h3>Bolo Caseiro</h3>
+                        <p>O gostinho de casa com toque gourmet.</p>
+                        <button class="btn-order-select" onclick="selectProduct('Bolo caseiro')">Selecionar</button>
+                    </div>
+                    <div class="product-card" data-product="Cookies">
+                        <img src="public/cookies.png" alt="Cookies">
+                        <h3>Cookies</h3>
+                        <p>Os cookies #1 de Sorocaba.</p>
+                        <button class="btn-order-select" onclick="selectProduct('Cookies')">Selecionar</button>
+                    </div>
+                    <div class="product-card" data-product="Paleta de bolo de cenoura">
+                        <img src="https://via.placeholder.com/400x400/f8f9fa/e91e63?text=Paleta+de+Cenoura" alt="Paleta de Bolo de Cenoura" id="paleta-img">
+                        <h3>Paleta de Cenoura</h3>
+                        <p>Inovação e sabor em cada mordida.</p>
+                        <button class="btn-order-select" onclick="selectProduct('Paleta de bolo de cenoura')">Selecionar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="encomenda">
+            <div class="container">
+                <div class="form-wrapper">
+                    <div class="form-header">
+                        <h2>Fazer Encomenda</h2>
+                        <p>Preencha os dados abaixo e entraremos em contato via WhatsApp para confirmar.</p>
+                    </div>
+                    <form id="order-form">
+                        <div class="form-group">
+                            <label for="name">Seu Nome *</label>
+                            <input type="text" id="name" name="name" placeholder="Como podemos te chamar?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product">Produto Desejado *</label>
+                            <select id="product" name="product" required>
+                                <option value="" disabled selected>Escolha um produto</option>
+                                <option value="Bolo de festa">Bolo de festa</option>
+                                <option value="Bolo caseiro">Bolo caseiro</option>
+                                <option value="Cookies">Cookies</option>
+                                <option value="Paleta de bolo de cenoura">Paleta de bolo de cenoura</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">Quantidade *</label>
+                            <input type="text" id="quantity" name="quantity" placeholder="Ex: 10 pessoas, 5 unidades..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="whatsapp">Seu WhatsApp *</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Endereço de Entrega *</label>
+                            <textarea id="address" name="address" rows="3" placeholder="Rua, número, bairro..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            Enviar Pedido via WhatsApp <i class="fab fa-whatsapp"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="public/logo.png" alt="Bia da Candy's Logo">
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2026 Bia da Candy's. Todos os direitos reservados.</p>
+                    <p>Wanel Ville, Sorocaba - SP</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/biadacandys/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5513999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5513999999999" class="whatsapp-float" id="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="main.js"></script>
+</body>
+</html>
